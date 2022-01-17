@@ -144,3 +144,10 @@ function writePassword() {
     password.push(chooseOption);
   }
 
+  var newPassword = password.join("");
+  UserInput(newPassword);
+  return newPassword;
+}
+function UserInput(newPassword) {
+  document.getElementById("password").textContent = newPassword;
+}
