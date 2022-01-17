@@ -69,7 +69,40 @@ function generatePassword (){
   }
 
   // For 2 options chosen 
-else if (confirmNumber && confirmLowercase) {
+else if (confirmCharacter && confirmNumber) {
+  options = chars.concat(num);
+}
+else if (confirmCharacter && confirmUppercase) {
+  options = chars.concat(uppercaseLetters);
+}
+else if (confirmCharacter && confirmLowercase) {
+  options = chars.concat(letters);
+}
+else if (confirmUppercase && confirmNumber) {
+  options = uppercaseLetters.concat(num);
+}
+else if (confirmUppercase && confirmLowercase) {
+  options = uppercaseLetters.concat(letters);
+}
+else if (confirmLowercase && confirmNumber) {
+  options = letters.concat(num);
+}
 
+// For 1 option chosen
+else if (confirmCharacter) {
+  options = chars;
 }
+else if (confirmNumber) {
+  options = num;
 }
+else if (confirmUppercase) {
+  options = upper.concat(uppercaseLetters);
+}
+else if (confirmLowercase) {
+  options = letters;
+}
+
+};
+
+var password = [];
+
