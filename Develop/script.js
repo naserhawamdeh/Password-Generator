@@ -52,9 +52,13 @@ generate.addEventListener("click", function () {
   document.getElementById("password").placeholder = newPassword;
 });
 
+
+//  *****                  *******
 // Function to generate the password
+//  *****                  *******
 
 function writePassword() {
+  // Asks user to choose between 8 and 128 characters
   chooseNumber = parseInt(
     prompt(
       "How many characters do you want your password to be? Choose between 8 and 128"
@@ -148,6 +152,9 @@ function writePassword() {
   UserInput(newPassword);
   return newPassword;
 }
+
+// Runs the function
+
 function UserInput(newPassword) {
   document.getElementById("password").textContent = newPassword;
 }
