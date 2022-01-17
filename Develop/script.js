@@ -153,7 +153,7 @@ function writePassword() {
   return newPassword;
 }
 
-// Runs the function
+// Runs the function to display password
 
 function UserInput(newPassword) {
   document.getElementById("password").textContent = newPassword;
